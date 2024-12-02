@@ -59,7 +59,7 @@ Route::middleware(['auth', 'ativo'])->group(function() {
         Route::get('/show/{escola_id}', 'show')->name('show');
         Route::delete('/{escola_id}', 'destroy')->name('destroy');
 
-        Route::put('/', 'update')->name('escolas.update');
+        Route::put('/{escola_id}', 'update')->name('update');
 
     });
     Route::prefix('usuarios/notificacoes')->controller(NotificacaoController::class)->group(function(){
